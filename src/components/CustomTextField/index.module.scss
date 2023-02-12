@@ -1,0 +1,33 @@
+@use '../../variables' as v;
+
+
+.content {
+  width: auto;
+  display: flex;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+
+
+  .field {
+    margin: 10px;
+    width: 100%;
+
+    label {
+      margin-top: -5px;
+      padding-left: 10px;
+    }
+}
+
+
+}
+
+.content:active, .content:after, .content:hover, .content:focus {
+  border-color: v.$accent-color;
+  border-width: 0.7px;
+}

@@ -1,0 +1,56 @@
+@use '../../variables' as v;
+
+.content {
+  width: 1150px;
+  height: auto;
+  margin:  100px auto;
+
+  font-family: v.$font-family;
+
+  h1 {
+    color: v.$black-color;
+    font-size: v.$big-font-size;
+    font-weight: v.$big-font-weight;
+    line-height: 95%;
+    letter-spacing: -0.03em;
+    margin-bottom: 60px;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+    margin: 100px 40px;
+    width: auto;
+
+    .list {
+      grid-template-columns: repeat(2, 43vw);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .content {
+    margin: 100px 40px;
+    width: auto;
+    h1 {
+      font-size: 35px;
+    }
+
+
+    .list {
+      grid-template-columns: repeat(1, 80vw);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+}

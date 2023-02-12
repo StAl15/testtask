@@ -1,0 +1,97 @@
+@use '../../variables' as v;
+
+.content {
+  width: 100%;
+  height: auto;
+  background-color: v.$accent-color;
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 100px;
+
+  .title {
+    margin-top: 10px;
+    h3 {
+      color: v.$black-color;
+      font-size: v.$pre-med-font-size;
+      font-weight: v.$big-font-weight;
+      line-height: 120%;
+      letter-spacing: -0.01em;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      p {
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        color: v.$black-color;
+        font-weight: v.$lit-font-weight;
+        font-size: v.$lit-font-size;
+        line-height: 200%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+  .apps {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    .mockup {
+      display: none;
+    }
+
+    .title {
+      margin-left: 40px;
+      width: auto;
+      height: 100%;
+      h3 {
+        width: 300px;
+      }
+    }
+    .apps {
+      margin-left: auto;
+      width: 35vw;
+      margin-right: 40px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    .mockup {
+      display: none;
+    }
+
+    .title {
+      margin-left: 0;
+      width: auto;
+      height: 100%;
+      h3 {
+        width: 300px;
+      }
+    }
+    .apps {
+      margin-left: auto;
+      margin-right: 40px;
+    }
+  }
+}

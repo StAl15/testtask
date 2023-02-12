@@ -1,0 +1,416 @@
+@use '../../variables' as v;
+
+*, {
+  font-weight: v.$big-font-weight;
+}
+
+.main {
+
+  background-color: v.$dark-accent;
+  width: 100%;
+  height: auto;
+
+  .content {
+    display: grid;
+    width: auto;
+    height: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 30px;
+
+    .mainInfo {
+      display: flex;
+
+      .left {
+        display: grid;
+
+        .info {
+          h3 {
+            color: v.$accent-color;
+
+          }
+
+          p {
+            color: v.$sec-text-color;
+          }
+
+          div {
+            width: 200px;
+
+            button {
+              margin-bottom: 10px;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+              justify-items: center;
+
+
+            }
+
+            div {
+              button {
+                background-color: v.$dark-accent;
+                border-color: v.$accent-color;
+                border-style: solid;
+                border-width: 1px;
+
+                span {
+                  color: v.$secondary-color;
+                }
+              }
+
+              button:hover {
+                transition-duration: 0.3s;
+                border-style: none;
+                background-color: v.$secondary-color;
+
+                span {
+                  transition-duration: 0.3s;
+                  color: v.$black-color;
+                }
+              }
+            }
+          }
+
+        }
+
+
+      }
+
+      .right {
+        margin-left: 100px;
+        width: 100%;
+
+        .up {
+
+          display: flex;
+
+          h3 {
+            color: v.$secondary-color;
+          }
+
+          img {
+            margin-left: 5px;
+            filter: invert(65%) sepia(2%) saturate(14%) hue-rotate(39deg) brightness(93%) contrast(92%);
+
+          }
+
+          .headersMenu {
+            display: flex;
+
+            .option {
+              margin-right: 20px;
+
+            }
+          }
+
+          .lkDiv {
+            display: flex;
+            margin-left: auto;
+            height: fit-content;
+            align-items: center;
+
+            .lk {
+
+            }
+          }
+
+        }
+
+        .bottom {
+          width: 100%;
+          display: flex;
+        }
+      }
+    }
+
+
+  }
+
+  .aditionalyInfo {
+
+    display: flex;
+
+    .social {
+      margin-top: auto;
+      display: flex;
+
+      button {
+        background-color: v.$dark-accent;
+        border-style: solid;
+        border-radius: 100%;
+        border-width: 1px;
+        border-color: v.$secondary-color;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 0px;
+          filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(89deg) brightness(112%) contrast(99%);
+        }
+      }
+
+      button:hover {
+
+        background-color: v.$secondary-color;
+
+        img {
+          transform: translateX(0px);
+          filter: revert;
+        }
+      }
+    }
+
+    .address {
+      display: flex;
+      width: 100%;
+
+      .item1 {
+        margin-left: 20px;
+      }
+
+      .item2 {
+        margin-left: 40px;
+      }
+
+      p {
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: 0;
+        color: v.$secondary-color;
+        font-weight: v.$lit-font-weight;
+        font-size: v.$lit-font-size;
+        text-transform: uppercase;
+
+        span {
+          color: v.$sec-text-color;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+
+  .titlesBottom {
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    div {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+
+
+      h5 {
+        color: v.$sec-text-color;
+
+        span {
+          color: v.$secondary-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .main {
+
+    .content {
+      margin-left: 40px;
+      margin-right: 40px;
+
+      .mainInfo {
+        display: grid;
+
+        .left {
+          width: 100%;
+
+          .info {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .accentInfo {
+              margin-right: 20px;
+              display: flow-root;
+            }
+
+            .btns {
+              margin-left: auto;
+              display: flex;
+              width: auto;
+
+              div {
+                width: auto;
+              }
+
+              button {
+                margin-right: 10px;
+                width: auto;
+
+                span {
+                  width: max-content;
+                  margin-right: 0;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          margin-left: 0;
+
+          .up {
+            .headersMenu {
+              width: 350px;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+
+      .aditionalyInfo {
+        flex-direction: column;
+
+        .social {
+          margin-top: 10px;
+        }
+
+        .address {
+          margin-top: 30px;
+
+          p {
+            margin-left: 0;
+          }
+
+        }
+
+
+      }
+
+    }
+
+    .titlesBottom {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+
+  }
+
+}
+
+@media (max-width: 600px) {
+  .main {
+
+    .content {
+      margin-left: 25px;
+      margin-right: 40px;
+
+      .mainInfo {
+        display: grid;
+
+        .left {
+          width: 100%;
+
+          .info {
+            width: 100%;
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+
+            .accentInfo {
+              margin-right: 20px;
+              display: flow-root;
+            }
+
+            .btns {
+              display: flex;
+              width: auto;
+
+              div {
+                width: auto;
+              }
+
+              button {
+                margin-right: 10px;
+                width: auto;
+
+                span {
+                  width: max-content;
+                  margin-right: 0;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          margin-left: 0;
+
+          .up {
+            .headersMenu {
+              width: auto;
+              display: flow-root;
+            }
+          }
+
+          .bottom {
+            display: grid;
+          }
+        }
+
+      }
+
+      .aditionalyInfo {
+        flex-direction: column;
+
+        .social {
+          margin-top: 10px;
+        }
+
+        .address {
+          margin-top: 30px;
+
+          p {
+            margin-left: 0;
+            font-size: 10px;
+          }
+
+        }
+
+
+      }
+
+    }
+
+    .titlesBottom {
+      margin-left: 25px;
+      margin-right: 25px;
+
+      div {
+
+        .tbl {
+          visibility: hidden;
+        }
+
+        .tbl:before {
+          visibility: visible;
+          content: "© 2022. Спец. автоцентр";
+        }
+
+      }
+    }
+
+
+  }
+
+}

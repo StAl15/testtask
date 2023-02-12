@@ -1,0 +1,231 @@
+@use '../../variables' as v;
+
+.content {
+  background-color: v.$dark-accent;
+  width: 100%;
+  height: auto;
+  min-height: 584px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .left {
+    align-self: center;
+    width: 50%;
+    height: 100%;
+    left: 0;
+
+    .desc {
+      margin-left: 120px;
+      //margin-top: 50px;
+      height: 100%;
+      top: 50%;
+
+      h1 {
+        font-family: v.$font-family;
+        color: v.$secondary-color;
+        font-size: v.$big-font-size;
+        font-weight: v.$big-font-weight;
+        line-height: 95%;
+        letter-spacing: -0.03em;
+      }
+
+      .phone {
+        color: v.$accent-color;
+      }
+
+      p {
+        line-height: 40%;
+        font-family: v.$font-family;
+        font-weight: v.$big-font-weight;
+        padding: 0;
+        margin-bottom: 0;
+        color: v.$secondary-color;
+      }
+
+      .littleH {
+        color: v.$sec-text-color;
+      }
+
+      .times {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        //display: grid;
+        //align-items: start;
+        padding: 0;
+        margin-bottom: 10px;
+      }
+
+      .adress {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-bottom: 30px;
+      }
+
+      button {
+        background-color: v.$accent-color;
+        //line-height: 40%;
+        font-family: v.$font-family;
+        font-weight: v.$big-font-weight;
+        margin-top: 60px;
+        position: static;
+        padding: 20px 40px;
+        border-style: none;
+        border-radius: 10px;
+        align-items: center;
+        display: flex;
+        height: 60px;
+
+        span {
+          margin-right: 10px;
+        }
+
+        img {
+          height: 20px;
+        }
+      }
+
+      button:hover {
+
+        background-color: v.$secondary-color;
+
+        img {
+          transform: translateY(5px);
+          transition-timing-function: ease;
+          transition-duration: 0.5s;
+          transition-property: transform;
+
+        }
+      }
+
+
+    }
+
+  }
+
+  .right {
+    width: 50%;
+    height: 100%;
+    right: 0;
+
+
+    .slider {
+      width: auto;
+      height: 100%;
+      z-index: 1;
+      position: static;
+      box-sizing: border-box;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .controls {
+      display: flex;
+      width: 80%;
+      margin-left: 30px;
+      position: sticky;
+      top: 53%;
+      left: 50%;
+      z-index: 2;
+      margin-top: -100px;
+      align-items: center;
+
+      h1 {
+        font-family: v.$font-family;
+        font-weight: v.$big-font-weight;
+        color: v.$secondary-color;
+        margin-left: auto;
+      }
+
+      .btns {
+        display: flex;
+        width: 110px;
+
+
+        .btn_left {
+          margin-right: auto;
+        }
+
+        .btn_right {
+          margin-left: auto;
+        }
+
+        button {
+          min-width: 50px;
+          height: 50px;
+          border-style: none;
+          border-radius: 100%;
+          background-color: v.$accent-color;
+
+          img {
+            width: 20px;
+          }
+        }
+
+        button:hover {
+          transition-duration: 0.3s;
+          background-color: v.$secondary-color;
+        }
+      }
+
+    }
+
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+
+    .left {
+      width: 100%;
+      margin-bottom: 50px;
+      margin-top: 60px;
+      .desc {
+        margin-left: 40px;
+      }
+    }
+
+    .right {
+      width: 100%;
+      .controls {
+        left: 10%;
+        position: sticky;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+
+    .left {
+      width: 100%;
+      margin-bottom: 50px;
+      margin-top: 120px;
+      .desc {
+        margin-left: 40px;
+
+        h1 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .right {
+      width: 100%;
+      .controls {
+        left: 10%;
+        position: sticky;
+      }
+    }
+  }
+}

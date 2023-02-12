@@ -1,0 +1,36 @@
+@use '../../variables' as v;
+
+
+.content {
+  width: auto;
+  display: flex;
+  height: 70px;
+  background-color: v.$secondary-color;
+  margin-bottom: 20px;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    background-color: v.$secondary-color;
+  }
+  .field {
+    margin: 10px;
+    width: 100%;
+
+    label {
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+  }
+
+
+}
+
+.content:active, .content:after, .content:hover, .content:focus {
+  border-color: v.$accent-color;
+  border-width: 0.7px;
+}

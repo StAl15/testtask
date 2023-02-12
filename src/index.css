@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'ArialNova';
+  src: local('ArialNova'), url(/public/font/ArialNova.ttf);
+}

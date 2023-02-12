@@ -1,0 +1,105 @@
+@use '../../variables' as v;
+
+.content {
+  background-color: v.$dark-accent;
+  font-family: v.$font-family;
+  width: 100%;
+  height: auto;
+
+  padding-bottom: 280px;
+
+  .title {
+    padding-top: 75px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-left: 100px;
+    margin-right: 100px;
+    h1 {
+      color: v.$secondary-color;
+      font-size: v.$pre-biggest-font-size;
+      font-weight: v.$big-font-weight;
+      line-height: 95%;
+      letter-spacing: -0.03em;
+    }
+    .summary {
+      color: v.$accent-color;
+    }
+    h6 {
+      font-weight: v.$lit-font-weight;
+      font-size: v.$lit-font-size;
+      line-height: 400%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: v.$sec-text-color;
+    }
+  }
+
+  hr {
+    margin-left: 100px;
+    margin-right: 100px;
+    //color: v.$secondary-color;
+    border-style: solid;
+    border-width: 0.01px;
+    border-color: v.$sec-text-color;
+
+  }
+
+  .reviews {
+
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+
+    padding-bottom: 0;
+
+    .title {
+      margin-left: 40px;
+      margin-right: 40px;
+      align-items: flex-end;
+      h1 {
+        font-size: 5vw;
+      }
+    }
+
+    hr {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .content {
+
+    padding-bottom: 0;
+
+    .title {
+      margin-left: 40px;
+      margin-right: 40px;
+      align-items: flex-end;
+
+      .revTitle {
+        padding-bottom: 30px;
+      }
+      .summary {
+        padding-right: 10px;
+      }
+      h1 {
+        font-size: 8vw;
+      }
+      h6 {
+        font-size: 6px;
+        width: 100%;
+      }
+    }
+
+    hr {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use '../../variables' as v;
+
+.content {
+  width: 100%;
+  height: auto;
+  display: grid;
+
+  .title {
+    color: v.$sec-text-color;
+  }
+  .blockHr {
+    width: 100%;
+    height: 0px;
+    margin-bottom: 40px;
+  }
+
+  .items {
+    h5 {
+      width: fit-content;
+      color: v.$secondary-color;
+      margin-top: -15px;
+      font-weight: v.$big-font-weight;
+      font-size: v.$lit-font-size + 3px;
+      line-height: 18px;
+    }
+    h5:hover {
+      //text-decoration: solid underline v.$accent-color 2px;
+      border-bottom-style: solid;
+      border-bottom-color: v.$accent-color;
+      border-bottom-width: 2px;
+      transition-duration: 0.3s;
+
+    }
+  }
+
+}

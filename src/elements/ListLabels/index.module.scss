@@ -1,0 +1,37 @@
+@use '../../variables' as v;
+
+.content {
+  //margin-left: 120px;
+  width: max-content;
+  height: auto;
+  font-family: v.$font-family;
+
+  h6 {
+    margin-left: 120px;
+    font-weight: v.$lit-font-weight;
+    font-size: v.$lit-font-size;
+    line-height: 200%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: v.$sec-text-color;
+
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+
+    h6 {
+      margin-left: 40px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+
+    h6 {
+      margin-left: 40px;
+    }
+  }
+}

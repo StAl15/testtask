@@ -1,0 +1,36 @@
+@use '../../variables' as v;
+
+
+.btnComponent {
+  background-color: v.$accent-color;
+  font-weight: v.$big-font-weight;
+  align-items: center;
+  justify-items: center;
+  display: flex;
+  padding: 15px 20px;
+  border-style: none;
+  border-radius: 5px;
+  width: auto;
+
+  span {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    width: auto;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+.btnComponent:hover {
+  background-color: v.$secondary-color;
+  transition-duration: 0.3s;
+
+  img {
+    transition-duration: 0.3s;
+    transform: translateX(5px);
+  }
+}

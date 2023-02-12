@@ -1,0 +1,39 @@
+@use '../../variables' as v;
+
+.content {
+  width: 200px;
+  height: 200px;
+  display: grid;
+
+  img {
+    filter: invert(72%) sepia(96%) saturate(731%) hue-rotate(348deg) brightness(100%) contrast(99%);
+    width: 50px;
+    height: 50px;
+    margin-right: auto;
+  }
+
+  h6 {
+    margin-top: 0;
+    color: v.$black-color;
+    font-size: v.$pre-med-font-size;
+    font-weight: v.$big-font-weight;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+  }
+
+}
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: 160px;
+
+    h6 {
+      font-size: 17px;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@use '../../variables' as v;
+
+.content {
+
+  display: flex;
+  width: auto;
+  height: auto;
+  font-family: v.$font-family;
+
+  .image {
+    img {
+      width: 700px;
+      height: auto;
+    }
+  }
+
+  .desc {
+
+    margin-left: 30px;
+
+    h1 {
+      top: 0;
+      width: min-content;
+      color: v.$black-color;
+      font-size: v.$big-font-size;
+      font-weight: v.$big-font-weight;
+      line-height: 95%;
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+
+    p {
+      margin-top: 20px;
+      color: v.$sec-text-color;
+    }
+
+    button {
+      margin-top: 30px;
+      border-style: none;
+      display: flex;
+      background-color: v.$background-color;
+      align-items: center;
+      justify-content: center;
+
+      .btnIco {
+        margin-right: 10px;
+        background-color: v.$accent-color;
+        width: auto;
+        height: auto;
+        padding: 5px;
+        border-radius: 100%;
+        border-style: none;
+        align-items: center;
+        justify-items: center;
+
+        img {
+          width: 20px;
+          height: 20px;
+          filter: invert(0%) sepia(8%) saturate(30%) hue-rotate(230deg) brightness(101%) contrast(100%);
+        }
+      }
+
+
+    }
+
+    button:hover {
+
+      .btnIco {
+        transition-duration: 0.3s;
+        background-color: v.$dark-accent;
+
+        img {
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(103%) contrast(101%);
+        }
+      }
+    }
+
+  }
+
+
+}
+
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+    flex-direction: column;
+
+    .image {
+      img {
+        width: 90%;
+      }
+    }
+
+    .desc {
+      margin-left: 0;
+      margin-top: 40px;
+
+      h1 {
+        font-size: v.$med-font-size + 14px;
+        line-height: 105%;
+        /* or 40px */
+        letter-spacing: -0.015em;
+        width: 550px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+
+    .image {
+      img {
+        width: 80%;
+      }
+    }
+
+    .desc {
+      margin-left: 0;
+      margin-top: 40px;
+
+      h1 {
+        font-size: v.$med-font-size;
+        line-height: 105%;
+        /* or 40px */
+        letter-spacing: -0.015em;
+        width: 300px;
+      }
+    }
+  }
+}

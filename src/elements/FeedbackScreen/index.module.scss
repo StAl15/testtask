@@ -1,0 +1,116 @@
+@use '../../variables' as v;
+
+.main {
+  width: 100%;
+  height: 630px;
+  margin-top: 130px;
+  background-image: url(../../assets/images/backFeedback.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+  .content {
+    padding-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    .formTitle {
+
+
+      hr {
+        margin-top: 50px;
+        width: 100%;
+        color: v.$secondary-color;
+      }
+
+      h6 {
+        color: v.$secondary-color;
+        font-weight: v.$lit-font-weight;
+        font-size: v.$lit-font-size;
+        line-height: 200%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        margin: 0;
+      }
+    }
+
+    .formBlock {
+      margin-top: 50px;
+      margin-left: 50%;
+      h3 {
+        color: v.$secondary-color;
+        font-size: v.$med-font-size;
+        font-weight: v.$big-font-weight;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        width: 550px;
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .main {
+    margin-top: 0;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+      margin-left: 40px;
+      margin-right: 40px;
+      align-items: center;
+      justify-content: center;
+
+      .formTitle {
+        hr {
+          margin-top: 20px;
+        }
+      }
+
+      .formBlock {
+        margin-left: 0;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .main {
+    margin-top: 0;
+    height: 380px;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+      padding-top: 40px;
+      margin-left: 40px;
+      margin-right: 40px;
+      align-items: center;
+      justify-content: center;
+
+      .formTitle {
+        hr {
+          margin-top: 0px;
+        }
+      }
+
+      .formBlock {
+        margin-left: 0;
+        margin-top: 30px;
+        h3 {
+          font-size: 20px;
+          width: 330px;
+        }
+        button {
+          margin-top: 40px;
+        }
+
+      }
+    }
+  }
+}

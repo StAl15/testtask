@@ -1,0 +1,67 @@
+@use '../../variables' as v;
+
+.content {
+  width: 100%;
+  height: auto;
+
+
+  .btns {
+    margin-left: 100px;
+    right: 0;
+    //margin-top: -60px;
+    display: flex;
+    position: static;
+    transform: translateY(-100%) translateX(60%);
+
+    button {
+      background-color: v.$background-color;
+      border-style: solid;
+      border-color: v.$dark-accent;
+      border-radius: 100%;
+      border-width: 1px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button:hover{
+      transition-duration: 0.5s;
+      background-color: v.$dark-accent;
+
+      img {
+        filter: invert(93%) sepia(100%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);      }
+    }
+  }
+  .slider {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+
+    .btns {
+      transform: translateY(calc(calc(100% + 400%) * -1)) translateX(70%);
+
+      button {
+        background-color: v.$accent-color;
+        border-style: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .content {
+
+    .btns {
+      transform: translateY(calc(calc(100% + 400%) * -1)) translateX(40%);
+
+      button {
+        background-color: v.$accent-color;
+        border-style: none;
+      }
+    }
+  }
+}

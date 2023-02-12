@@ -1,0 +1,114 @@
+@use '../../variables' as v;
+
+.content {
+  margin-top: -280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1150px;
+  height: 550px;
+  display: flex;
+  font-family: v.$font-family;
+  background-color: v.$dark-accent;
+
+  .textBlock {
+
+    width: auto;
+    height: max-content;
+
+    img {
+      width: 380px;
+      height: 280px;
+    }
+
+    padding-bottom: 20px;
+
+    .info {
+      margin-top: -10px;
+      padding-left: 40px;
+
+      h6 {
+        color: v.$secondary-color;
+        font-size: v.$lit-font-size+3px;
+        font-weight: 400;
+        line-height: 140%;
+        height: auto;
+
+
+        span {
+          color: v.$accent-color;
+        }
+      }
+    }
+
+    button {
+      margin-top: -10px;
+      margin-left: 40px;
+      background-color: v.$accent-color;
+      //line-height: 40%;
+      font-family: v.$font-family;
+      font-weight: v.$big-font-weight;
+      align-items: center;
+      justify-items: center;
+      display: flex;
+      padding: 15px 20px;
+      border-style: none;
+      border-radius: 5px;
+
+      span {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      img {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+      }
+    }
+    button:hover {
+      background-color: v.$secondary-color;
+    }
+  }
+
+  //.map_container {
+    //width: 800px;
+    //height: 100%;
+    //background-image: url("../../assets/images/mapImage.svg");
+    //background-repeat: no-repeat;
+    //background-position: center;
+    //background-size: cover;
+    //position: sticky;
+
+  //}
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .content {
+    width: auto;
+    margin-top: 0;
+    flex-direction: column-reverse;
+    width: auto;
+    height: auto;
+
+    .textBlock {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: auto;
+    margin-top: 0;
+    flex-direction: column-reverse;
+    width: auto;
+    height: auto;
+
+    .textBlock {
+      img {
+        display: none;
+      }
+    }
+  }
+}

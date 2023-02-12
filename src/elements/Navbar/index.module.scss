@@ -1,0 +1,187 @@
+@use '../../variables' as v;
+
+.main {
+  z-index: 300;
+  position: fixed;
+  width: 100%;
+  display: table;
+
+  height: 60px;
+  background-color: v.$secondary-color;
+
+  .contentUnder {
+    width: 100%;
+    height: auto;
+    display: none;
+    background-color: v.$secondary-color;
+
+    .titlesUnder {
+      margin-left: 40%;
+    }
+  }
+
+  .content {
+    margin-left: 120px;
+    margin-right: 120px;
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    .logo {
+      left: 0;
+    }
+
+    .titles {
+      //width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      right: 0;
+      margin-left: auto;
+      margin-right: 220px;
+
+      .serTitle {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        h6 {
+          margin-right: 5px;
+        }
+
+        img {
+          margin-right: 50px;
+        }
+      }
+
+      .serTitle:hover, .serTitle:active, .serTitle:focus, .contentUnder:hover {
+        img {
+          transition-duration: 0.3s;
+          transform: rotate(180deg);
+        }
+      }
+
+      .serTitle:focus ~ .contentUnder,
+      .serTitle:active ~ .contentUnder,
+      .contentUnder:hover {
+        display: block;
+      }
+
+
+      hr {
+        color: v.$sec-text-color;
+        height: 100%;
+        border-style: solid;
+        border-width: 0.1px;
+        border-color: v.$sec-text-color;
+      }
+
+      h6 {
+        font-size: v.$lit-font-size + 1px;
+        font-weight: v.$big-font-weight;
+        color: v.$black-color;
+        margin-right: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          margin-left: 5px;
+          width: 20px;
+          height: auto;
+        }
+      }
+
+      .sec {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        button {
+          padding: 10px 10px;
+          font-size: v.$lit-font-size;
+        }
+
+        button:hover {
+          background-color: v.$dark-accent;
+
+          span {
+            color: v.$secondary-color;
+          }
+        }
+      }
+
+      .service {
+        align-items: center;
+        justify-content: center;
+
+      }
+    }
+
+  }
+
+
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .main {
+    .content {
+      margin-left: 40px;
+      margin-right: 40px;
+      .titles {
+        margin-right: 40px;
+        .sec {
+          flex-direction: row-reverse;
+        }
+        .serTitle{
+          display: none;
+        }
+        h6 {
+          display: none;
+        }
+
+        hr {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    .content {
+      margin-left: 40px;
+      margin-right: 40px;
+      align-items: center;
+
+      .logo {
+        content: url("../../../public/logTitile.svg");
+      }
+      .titles {
+        margin-right: 40px;
+        .sec {
+          flex-direction: row-reverse;
+        }
+        .serTitle{
+          display: none;
+        }
+        h6 {
+          display: none;
+        }
+
+        hr {
+          display: none;
+        }
+      }
+    }
+  }
+}
