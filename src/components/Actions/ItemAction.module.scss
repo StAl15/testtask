@@ -121,7 +121,7 @@
       margin-top: 40px;
 
       h1 {
-        font-size: v.$med-font-size;
+        font-size: v.$med-font-size - 4px;
         line-height: 105%;
         /* or 40px */
         letter-spacing: -0.015em;
