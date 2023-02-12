@@ -1,5 +1,5 @@
 import styles from './index.module.scss'
-import cover from '../../assets/images/Image.png'
+import cover from '../../assets/images/image.svg'
 import mapImg from '../../assets/images/mapImage.svg'
 import arrowR from '../../assets/icons/UI kit/Icon/State=chevron-right.svg'
 import {ButtonComponent} from "../../components/ButtonComponent";

@@ -4,7 +4,6 @@ import styles from './ListAction.module.scss'
 import Slider from 'react-slick'
 import arrowR from "../../assets/icons/UI kit/Icon/State=arrow-right.svg";
 import arrowL from "../../assets/icons/UI kit/Icon/State=arrow-left.svg";
-
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
